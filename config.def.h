@@ -68,13 +68,13 @@ static const keymap_t keys[] = {
 	{ 0,            XK_G,             g_n_or_last,          None },
 	{ 0,            XK_r,             g_reload_image,       None },
 	{ 0,            XK_D,             g_remove_image,       None },
-	{ ControlMask,  XK_h,             g_scroll_screen,      DIR_LEFT },
+	{ ControlMask,  XK_y,             g_scroll_screen,      DIR_LEFT }, // h->y
 	{ ControlMask,  XK_Left,          g_scroll_screen,      DIR_LEFT },
-	{ ControlMask,  XK_j,             g_scroll_screen,      DIR_DOWN },
+	{ ControlMask,  XK_n,             g_scroll_screen,      DIR_DOWN }, // j->n
 	{ ControlMask,  XK_Down,          g_scroll_screen,      DIR_DOWN },
-	{ ControlMask,  XK_k,             g_scroll_screen,      DIR_UP },
+	{ ControlMask,  XK_k,             g_scroll_screen,      DIR_UP },   // k->e
 	{ ControlMask,  XK_Up,            g_scroll_screen,      DIR_UP },
-	{ ControlMask,  XK_l,             g_scroll_screen,      DIR_RIGHT },
+	{ ControlMask,  XK_l,             g_scroll_screen,      DIR_RIGHT }, // l->o
 	{ ControlMask,  XK_Right,         g_scroll_screen,      DIR_RIGHT },
 	{ 0,            XK_plus,          g_zoom,               +1 },
 	{ 0,            XK_KP_Add,        g_zoom,               +1 },
@@ -84,24 +84,24 @@ static const keymap_t keys[] = {
 	{ 0,            XK_M,             g_mark_range,         None },
 	{ ControlMask,  XK_m,             g_reverse_marks,      None },
 	{ ControlMask,  XK_u,             g_unmark_all,         None },
-	{ 0,            XK_N,             g_navigate_marked,    +1 },
+	{ 0,            XK_J,             g_navigate_marked,    +1 }, // N->J
 	{ 0,            XK_P,             g_navigate_marked,    -1 },
 	{ 0,            XK_braceleft,     g_change_gamma,       -1 },
 	{ 0,            XK_braceright,    g_change_gamma,       +1 },
 	{ ControlMask,  XK_g,             g_change_gamma,        0 },
 
-	{ 0,            XK_h,             t_move_sel,           DIR_LEFT },
+	{ 0,            XK_y,             t_move_sel,           DIR_LEFT }, // h->y
 	{ 0,            XK_Left,          t_move_sel,           DIR_LEFT },
-	{ 0,            XK_j,             t_move_sel,           DIR_DOWN },
+	{ 0,            XK_n,             t_move_sel,           DIR_DOWN }, // j->n
 	{ 0,            XK_Down,          t_move_sel,           DIR_DOWN },
-	{ 0,            XK_k,             t_move_sel,           DIR_UP },
+	{ 0,            XK_e,             t_move_sel,           DIR_UP }, // k->e
 	{ 0,            XK_Up,            t_move_sel,           DIR_UP },
-	{ 0,            XK_l,             t_move_sel,           DIR_RIGHT },
+	{ 0,            XK_o,             t_move_sel,           DIR_RIGHT }, // l->o
 	{ 0,            XK_Right,         t_move_sel,           DIR_RIGHT },
 	{ 0,            XK_R,             t_reload_all,         None },
 
-	{ 0,            XK_n,             i_navigate,           +1 },
-	{ 0,            XK_n,             i_scroll_to_edge,     DIR_LEFT | DIR_UP },
+	{ 0,            XK_j,             i_navigate,           +1 }, // n->j
+	{ 0,            XK_j,             i_scroll_to_edge,     DIR_LEFT | DIR_UP }, // n->j
 	{ 0,            XK_space,         i_navigate,           +1 },
 	{ 0,            XK_p,             i_navigate,           -1 },
 	{ 0,            XK_p,             i_scroll_to_edge,     DIR_LEFT | DIR_UP },
@@ -109,26 +109,26 @@ static const keymap_t keys[] = {
 	{ 0,            XK_bracketright,  i_navigate,           +10 },
 	{ 0,            XK_bracketleft,   i_navigate,           -10 },
 	{ ControlMask,  XK_6,             i_alternate,          None },
-	{ ControlMask,  XK_n,             i_navigate_frame,     +1 },
+	{ ControlMask,  XK_j,             i_navigate_frame,     +1 }, // n->j
 	{ ControlMask,  XK_p,             i_navigate_frame,     -1 },
 	{ ControlMask,  XK_space,         i_toggle_animation,   None },
-	{ 0,            XK_h,             i_scroll,             DIR_LEFT },
+	{ 0,            XK_y,             i_scroll,             DIR_LEFT }, // h->y
 	{ 0,            XK_Left,          i_scroll,             DIR_LEFT },
-	{ 0,            XK_j,             i_scroll,             DIR_DOWN },
+	{ 0,            XK_n,             i_scroll,             DIR_DOWN }, // j->n
 	{ 0,            XK_Down,          i_scroll,             DIR_DOWN },
-	{ 0,            XK_k,             i_scroll,             DIR_UP },
+	{ 0,            XK_e,             i_scroll,             DIR_UP }, // k->e
 	{ 0,            XK_Up,            i_scroll,             DIR_UP },
-	{ 0,            XK_l,             i_scroll,             DIR_RIGHT },
+	{ 0,            XK_o,             i_scroll,             DIR_RIGHT }, // l->o
 	{ 0,            XK_Right,         i_scroll,             DIR_RIGHT },
-	{ 0,            XK_H,             i_scroll_to_edge,     DIR_LEFT },
-	{ 0,            XK_J,             i_scroll_to_edge,     DIR_DOWN },
-	{ 0,            XK_K,             i_scroll_to_edge,     DIR_UP },
-	{ 0,            XK_L,             i_scroll_to_edge,     DIR_RIGHT },
+	{ 0,            XK_Y,             i_scroll_to_edge,     DIR_LEFT }, // H->Y
+	{ 0,            XK_N,             i_scroll_to_edge,     DIR_DOWN }, // J->N
+	{ 0,            XK_E,             i_scroll_to_edge,     DIR_UP }, // K->E
+	{ 0,            XK_O,             i_scroll_to_edge,     DIR_RIGHT }, // L->O
 	{ 0,            XK_equal,         i_set_zoom,           100 },
 	{ 0,            XK_w,             i_fit_to_win,         SCALE_DOWN },
 	{ 0,            XK_W,             i_fit_to_win,         SCALE_FIT },
-	{ 0,            XK_e,             i_fit_to_win,         SCALE_WIDTH },
-	{ 0,            XK_E,             i_fit_to_win,         SCALE_HEIGHT },
+	{ 0,            XK_k,             i_fit_to_win,         SCALE_WIDTH }, // e->k
+	{ 0,            XK_K,             i_fit_to_win,         SCALE_HEIGHT }, // E->K
 	{ 0,            XK_less,          i_rotate,             DEGREE_270 },
 	{ 0,            XK_greater,       i_rotate,             DEGREE_90 },
 	{ 0,            XK_question,      i_rotate,             DEGREE_180 },
